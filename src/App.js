@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import './App.css';
-import MindARViewer from './mindar-viewer';
-//import MindARThreeViewer from './mindar-three-viewer';
+//import MindARViewer from './mindar-viewer';
+import MindARThreeViewer from './mindar-three-viewer';
 
 function App() {
-  const [started, setStarted] = useState("aframe");
+  const [started, setStarted] = useState("three");
 
   return (
     <div className="App">
-        {started === 'aframe' && (
-            <div style={{ width: "100vw", height: "100vh" }} className="container">
-                <MindARViewer/>
-                <video></video>
-            </div>
-        )}
+        
+        {started === 'three' && (
+          <div style={{ width: "100vw", height: "100vh" }} className="container">
+          <MindARThreeViewer />
+        </div>
+      )}
       {/*<h1>Example React component with <a href="https://github.com/hiukim/mind-ar-js" target="_blank">MindAR</a></h1>
 
       <div className="control-buttons">
